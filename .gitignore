@@ -1,0 +1,4 @@
+/bundle/
+*.log
+*.metadata
+/metadata/
