@@ -4,7 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title></title>
+<script type="text/javascript" src="tests/common/lib/jquery-1.11.3.min.js"></script>
+<script src="tests/units/modules/global.survey.js"></script>
+<script>
+	var gv = new global.globalObj();
+	$(document).ready(function(){
+		gv.AppendNewQuestionType("", "");
+	});
+	
+</script>
 </head>
 <body>
 	
