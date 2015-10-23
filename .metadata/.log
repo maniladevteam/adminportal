@@ -2059,3 +2059,146 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY oracle.eclipse.tools.glassfish 1 1 2015-10-24 01:07:57.864
+!MESSAGE GlassFish: Deploy archive C:\Users\U6016812\Desktop\iSurvey\iSurvey.war
+
+!ENTRY oracle.eclipse.tools.glassfish 4 1 2015-10-24 01:07:57.872
+!MESSAGE GlassFish: deploy is failing=
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.IllegalArgumentException: port out of range:-1
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishJarFile(GlassfishV4ServerBehavior.java:160)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModuleForGlassFishV3(GlassfishV4ServerBehavior.java:98)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModule(GlassfishV4ServerBehavior.java:56)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3157)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(Unknown Source)
+	at java.net.InetSocketAddress.<init>(Unknown Source)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:335)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:307)
+	at org.glassfish.tools.ide.admin.RunnerHttp.getHttpListenerProtocol(RunnerHttp.java:229)
+	at org.glassfish.tools.ide.admin.RunnerHttp.constructCommandUrl(RunnerHttp.java:372)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:924)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY oracle.eclipse.tools.glassfish 1 1 2015-10-24 01:07:57.895
+!MESSAGE GlassFish: Deploy archive C:\Users\U6016812\Desktop\iSurvey\iSurveys.war
+
+!ENTRY oracle.eclipse.tools.glassfish 4 1 2015-10-24 01:07:57.899
+!MESSAGE GlassFish: deploy is failing=
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.IllegalArgumentException: port out of range:-1
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishJarFile(GlassfishV4ServerBehavior.java:160)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModuleForGlassFishV3(GlassfishV4ServerBehavior.java:98)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModule(GlassfishV4ServerBehavior.java:56)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3157)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(Unknown Source)
+	at java.net.InetSocketAddress.<init>(Unknown Source)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:335)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:307)
+	at org.glassfish.tools.ide.admin.RunnerHttp.getHttpListenerProtocol(RunnerHttp.java:229)
+	at org.glassfish.tools.ide.admin.RunnerHttp.constructCommandUrl(RunnerHttp.java:372)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:924)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.server.core 4 0 2015-10-24 01:07:57.909
+!MESSAGE Publishing failed
+!SUBENTRY 1 oracle.eclipse.tools.glassfish 4 0 2015-10-24 01:07:57.909
+!MESSAGE cannot Deploy iSurvey
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.IllegalArgumentException: port out of range:-1
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishJarFile(GlassfishV4ServerBehavior.java:160)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModuleForGlassFishV3(GlassfishV4ServerBehavior.java:98)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModule(GlassfishV4ServerBehavior.java:56)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3157)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(Unknown Source)
+	at java.net.InetSocketAddress.<init>(Unknown Source)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:335)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:307)
+	at org.glassfish.tools.ide.admin.RunnerHttp.getHttpListenerProtocol(RunnerHttp.java:229)
+	at org.glassfish.tools.ide.admin.RunnerHttp.constructCommandUrl(RunnerHttp.java:372)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:924)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 oracle.eclipse.tools.glassfish 4 0 2015-10-24 01:07:57.909
+!MESSAGE cannot Deploy iSurveys
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.IllegalArgumentException: port out of range:-1
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishJarFile(GlassfishV4ServerBehavior.java:160)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModuleForGlassFishV3(GlassfishV4ServerBehavior.java:98)
+	at oracle.eclipse.tools.glassfish.GlassfishV4ServerBehavior.publishModule(GlassfishV4ServerBehavior.java:56)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModule(ServerBehaviourDelegate.java:1091)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publishModules(ServerBehaviourDelegate.java:1183)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:987)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3157)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.IllegalArgumentException: port out of range:-1
+	at java.net.InetSocketAddress.checkPort(Unknown Source)
+	at java.net.InetSocketAddress.<init>(Unknown Source)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:335)
+	at org.glassfish.tools.ide.utils.NetUtils.isSecurePort(NetUtils.java:307)
+	at org.glassfish.tools.ide.admin.RunnerHttp.getHttpListenerProtocol(RunnerHttp.java:229)
+	at org.glassfish.tools.ide.admin.RunnerHttp.constructCommandUrl(RunnerHttp.java:372)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:924)
+	at org.glassfish.tools.ide.admin.Runner.call(Runner.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 150 2015-10-24 01:12:11.287
+!MESSAGE Unable to start server on time.
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishServerBehaviourDelegate.launchServer(GlassfishServerBehaviourDelegate.java:252)
+	at oracle.eclipse.tools.glassfish.GlassfishServerLaunchDelegate.startDASAndTarget(GlassfishServerLaunchDelegate.java:224)
+	at oracle.eclipse.tools.glassfish.GlassfishServerLaunchDelegate.launch(GlassfishServerLaunchDelegate.java:133)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:731)
+	at org.eclipse.wst.server.core.internal.Server.startImpl2(Server.java:3541)
+	at org.eclipse.wst.server.core.internal.Server.startImpl(Server.java:3477)
+	at org.eclipse.wst.server.core.internal.Server$StartJob.run(Server.java:367)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
