@@ -1,0 +1,244 @@
+/*
+SQLyog Community v12.09 (64 bit)
+MySQL - 5.6.26-log : Database - iperform_survey_db
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`iperform_survey_db_test` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+
+USE `iperform_survey_db_test`;
+
+/*Table structure for table `tbl_question` */
+
+DROP TABLE IF EXISTS `tbl_question`;
+
+CREATE TABLE `tbl_question` (
+  `question_id` int(11) NOT NULL AUTO_INCREMENT,
+  `question_uuid` text COLLATE utf8_bin,
+  `question_name` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `question_description` text COLLATE utf8_bin,
+  PRIMARY KEY (`question_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_question` */
+
+/*Table structure for table `tbl_survey` */
+
+DROP TABLE IF EXISTS `tbl_survey`;
+
+CREATE TABLE `tbl_survey` (
+  `survey_id` int(11) NOT NULL AUTO_INCREMENT,
+  `survey_name` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `survey_description` text COLLATE utf8_bin,
+  `created_date` date DEFAULT NULL,
+  `created_time` time DEFAULT NULL,
+  `update_date` date DEFAULT NULL,
+  `update_time` time DEFAULT NULL,
+  `survey_uu_id` text COLLATE utf8_bin,
+  `survey_is_active` tinyint(1) DEFAULT NULL,
+  `survey_link` text COLLATE utf8_bin,
+  `created_by` varchar(7) COLLATE utf8_bin DEFAULT NULL,
+  `updated_by` varchar(7) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`survey_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey` */
+
+insert  into `tbl_survey`(`survey_id`,`survey_name`,`survey_description`,`created_date`,`created_time`,`update_date`,`update_time`,`survey_uu_id`,`survey_is_active`,`survey_link`,`created_by`,`updated_by`) values (1,'ase_first_survey','THIS IS THE FIRST SURVEY EVER CREATED','2015-10-15','20:17:44',NULL,NULL,'987e390f-7336-11e5-985c-80000ba99a60',1,NULL,'6016812',NULL);
+
+/*Table structure for table `tbl_survey_answer_type` */
+
+DROP TABLE IF EXISTS `tbl_survey_answer_type`;
+
+CREATE TABLE `tbl_survey_answer_type` (
+  `answer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `answer_type` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `answer_description` text COLLATE utf8_bin,
+  PRIMARY KEY (`answer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey_answer_type` */
+
+/*Table structure for table `tbl_survey_answer_type_default_value` */
+
+DROP TABLE IF EXISTS `tbl_survey_answer_type_default_value`;
+
+CREATE TABLE `tbl_survey_answer_type_default_value` (
+  `answer_type_id` int(11) DEFAULT NULL,
+  `answer_value` varchar(100) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey_answer_type_default_value` */
+
+/*Table structure for table `tbl_survey_question_answer_type_ mapping` */
+
+DROP TABLE IF EXISTS `tbl_survey_question_answer_type_ mapping`;
+
+CREATE TABLE `tbl_survey_question_answer_type_ mapping` (
+  `question_id` int(11) DEFAULT NULL,
+  `answer_type_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey_question_answer_type_ mapping` */
+
+/*Table structure for table `tbl_survey_question_mapping` */
+
+DROP TABLE IF EXISTS `tbl_survey_question_mapping`;
+
+CREATE TABLE `tbl_survey_question_mapping` (
+  `survey_id` int(11) DEFAULT NULL,
+  `question_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey_question_mapping` */
+
+/*Table structure for table `tbl_survey_roles` */
+
+DROP TABLE IF EXISTS `tbl_survey_roles`;
+
+CREATE TABLE `tbl_survey_roles` (
+  `role_id` int(11) NOT NULL AUTO_INCREMENT,
+  `rol_name` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey_roles` */
+
+/*Table structure for table `tbl_survey_user_roles` */
+
+DROP TABLE IF EXISTS `tbl_survey_user_roles`;
+
+CREATE TABLE `tbl_survey_user_roles` (
+  `user_role_track_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_employee_id` varbinary(7) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_role_track_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey_user_roles` */
+
+/*Table structure for table `tbl_survey_users` */
+
+DROP TABLE IF EXISTS `tbl_survey_users`;
+
+CREATE TABLE `tbl_survey_users` (
+  `user_id` int(11) NOT NULL,
+  `user_employee_id` varchar(7) COLLATE utf8_bin DEFAULT NULL,
+  `user_uu_id` text COLLATE utf8_bin,
+  `user_first_name` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `user_last_ name` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `user_email` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `user_is_active` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_survey_users` */
+
+/*Table structure for table `tbl_user_completion_survey_mapping` */
+
+DROP TABLE IF EXISTS `tbl_user_completion_survey_mapping`;
+
+CREATE TABLE `tbl_user_completion_survey_mapping` (
+  `user_id` varchar(7) COLLATE utf8_bin DEFAULT NULL,
+  `survey_uu_id` text COLLATE utf8_bin,
+  `completed_date` date DEFAULT NULL,
+  `completed_time` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_user_completion_survey_mapping` */
+
+/*Table structure for table `tbl_user_emp_tm_mapping` */
+
+DROP TABLE IF EXISTS `tbl_user_emp_tm_mapping`;
+
+CREATE TABLE `tbl_user_emp_tm_mapping` (
+  `emp_tm_uu_id` text COLLATE utf8_bin,
+  `tm_id` varchar(7) COLLATE utf8_bin DEFAULT NULL,
+  `emp_id` varchar(7) COLLATE utf8_bin DEFAULT NULL,
+  `is_current` tinyint(4) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_user_emp_tm_mapping` */
+
+/*Table structure for table `tbl_user_survey_value_mapping` */
+
+DROP TABLE IF EXISTS `tbl_user_survey_value_mapping`;
+
+CREATE TABLE `tbl_user_survey_value_mapping` (
+  `user_employee_id` varchar(7) COLLATE utf8_bin DEFAULT NULL,
+  `survey_id_uu_id` text COLLATE utf8_bin,
+  `question_id` int(11) DEFAULT NULL,
+  `answer_value` text COLLATE utf8_bin,
+  `question_type` varchar(20) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*Data for the table `tbl_user_survey_value_mapping` */
+
+/* Procedure structure for procedure `sp_add_admin_survey` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_add_admin_survey` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_add_admin_survey`(
+	IN p_survey_name VARCHAR(100),
+	IN p_survey_description TEXT,
+	IN p_created_id varchar(7)	
+    )
+BEGIN
+    SET @current_name = LOWER(p_survey_name);
+    SET @current = (SELECT COUNT(*) FROM tbl_survey WHERE survey_name = @current_name);
+	IF (@current = 0) THEN
+    
+			INSERT into tbl_survey(
+				survey_uu_id,
+				survey_name,
+				survey_description,
+				created_date,
+				created_time,
+				created_by,
+				survey_is_active
+			)	
+			VALUES
+			(
+				UUID(),
+				@current_name,
+				p_survey_description,
+				CURRENT_DATE(),
+				CURRENT_TIME(),
+				p_created_id,
+				1
+			);
+	ELSE 
+		select "Already registtered survey name";
+	END IF;
+	
+    END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_get_all_active_surveys` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_get_all_active_surveys` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_get_all_active_surveys`()
+BEGIN
+	Select * from tbl_survey Where survey_is_active = 1;
+    END */$$
+DELIMITER ;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

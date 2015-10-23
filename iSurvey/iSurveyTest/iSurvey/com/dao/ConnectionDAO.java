@@ -8,7 +8,7 @@ public class ConnectionDAO {
 	private static DataSource surveyDS = null;
 	private static Context surveyContext = null;
 
-	public static DataSource iSurveyConn() throws Exception {
+	public static DataSource iSurveyConntest() throws Exception {
 		if (surveyDS != null) {
 			return surveyDS;
 		}
@@ -18,7 +18,7 @@ public class ConnectionDAO {
 				surveyContext = new InitialContext();
 			}
 
-			surveyDS = (DataSource) surveyContext.lookup("iSurveyconnectionpool");
+			surveyDS = (DataSource) surveyContext.lookup("iSurveyconnectionpooltest");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -29,7 +29,7 @@ public class ConnectionDAO {
 	protected static Connection MssConnection() {
 		Connection conn = null;
 		try {
-			conn = iSurveyConn().getConnection();
+			conn = iSurveyConntest().getConnection();
 			return conn;
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -7,13 +7,7 @@
 <title></title>
 <script type="text/javascript" src="tests/common/lib/jquery-1.11.3.min.js"></script>
 <script src="tests/units/modules/global.survey.js"></script>
-<script>
-	var gv = new global.globalObj();
-	$(document).ready(function(){
-		gv.AppendNewQuestionType("", "");
-	});
-	
-</script>
+<script src="tests/units/modules/index.js"></script>
 </head>
 <body>
 	
