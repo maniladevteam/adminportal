@@ -18,7 +18,7 @@
 
 <link href="../../resources/css/bootstrap-3.3.5-dist/css/survey.css"></link>
 
-<script src="../../common/lib/jquery-1.11.3.min.js"></script>
+<script src="../../common/lib/jquery-1.11.3.min.js"></script>  
 <script src="../../resources/css/bootstrap-3.3.5-dist/css/jquery.min.js"></script>
 <script src="../../resources/css/bootstrap-3.3.5-dist/css/bootstrap.min.js"></script>
 <script src="../../resources/css/bootstrap-3.3.5-dist/css/ie-emulation-modes-warning.js"></script>

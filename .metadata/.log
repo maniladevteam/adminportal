@@ -2202,3 +2202,19 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.wst.server.core.internal.Server.startImpl(Server.java:3477)
 	at org.eclipse.wst.server.core.internal.Server$StartJob.run(Server.java:367)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 4 150 2015-10-24 01:16:35.176
+!MESSAGE Unable to start server on time.
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at oracle.eclipse.tools.glassfish.GlassfishServerBehaviourDelegate.launchServer(GlassfishServerBehaviourDelegate.java:252)
+	at oracle.eclipse.tools.glassfish.GlassfishServerLaunchDelegate.startDASAndTarget(GlassfishServerLaunchDelegate.java:224)
+	at oracle.eclipse.tools.glassfish.GlassfishServerLaunchDelegate.launch(GlassfishServerLaunchDelegate.java:133)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:731)
+	at org.eclipse.wst.server.core.internal.Server.startImpl2(Server.java:3541)
+	at org.eclipse.wst.server.core.internal.Server.startImpl(Server.java:3477)
+	at org.eclipse.wst.server.core.internal.Server$StartJob.run(Server.java:367)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
