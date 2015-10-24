@@ -2218,3 +2218,13 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.wst.server.core.internal.Server.startImpl(Server.java:3477)
 	at org.eclipse.wst.server.core.internal.Server$StartJob.run(Server.java:367)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY oracle.eclipse.tools.glassfish 1 1 2015-10-24 01:21:45.542
+!MESSAGE GlassFish: Deploy direcotry C:\glassfish4\glassfish\domains\domain1\eclipseApps\iSurvey
+
+!ENTRY oracle.eclipse.tools.glassfish 1 1 2015-10-24 01:22:24.978
+!MESSAGE GlassFish: Deploy direcotry C:\glassfish4\glassfish\domains\domain1\eclipseApps\iSurvey
+
+!ENTRY org.eclipse.core.net 4 0 2015-10-24 23:53:15.889
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error 'The proxy auto-configuration script could not be downloaded
+' #12167.
