@@ -18,7 +18,7 @@ public class ConnectionDAO {
 				surveyContext = new InitialContext();
 			}
 
-			surveyDS = (DataSource) surveyContext.lookup("iSurveyconnectionpooltest");
+			surveyDS = (DataSource) surveyContext.lookup("iSurveyconnectionpoolLive");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
